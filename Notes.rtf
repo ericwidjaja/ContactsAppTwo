@@ -10,8 +10,10 @@
 \csgenericrgb\c66399\c100000\c91903;\csgenericrgb\c33726\c81569\c70196;\csgenericrgb\c66997\c39255\c100000;\csgenericrgb\c67059\c39216\c100000;\csgenericrgb\c98824\c27451\c31765;
 }
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\})}{\leveltext\leveltemplateid1\'02\'00);}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}
-{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\})}{\leveltext\leveltemplateid101\'02\'00);}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
-{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\})}{\leveltext\leveltemplateid101\'02\'00);}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\})}{\leveltext\leveltemplateid201\'02\'00);}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\})}{\leveltext\leveltemplateid301\'02\'00);}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
 \margl1440\margr1440\vieww9000\viewh8400\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
@@ -68,5 +70,15 @@
 \f1\fs24 \cf2 \cb1 \expnd0\expndtw0\kerning0
 \outl0\strokewidth0 \strokec2 	Make sure you run with both examples: failed and success\
 \
-3. Storyboard\
+3. Storyboard and ContactsVC:\
+\pard\tx220\tx720\tx791\pardeftab791\li720\fi-720\pardirnatural\partightenfactor0
+\ls3\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1)	}Refactor your VC to 'ContactsVC' then add TableViewObject, set all constraints to 0, so it will bound to view\
+{\listtext	2)	}change to 1 for Prototype Cell. Inside tbl view cell -> change style to subtitle and set identifier to 'contactCell'\
+{\listtext	3)	}Connect it with outlet property, then create private var 'allContacts'\
+{\listtext	4)	}create func loadAllContacts\
+{\listtext	5)	}Create Extension ContactsVC with UITblViewDatasource and Delegate, number of rows and indexPath\
+{\listtext	6)	}\
+\pard\tx220\tx720\tx791\pardeftab791\li720\fi-720\pardirnatural\partightenfactor0
+\ls4\ilvl0\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
 }
