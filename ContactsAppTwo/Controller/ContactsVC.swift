@@ -17,10 +17,29 @@ class ContactsVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
         loadAllContacts()
+        contactsTableView.dataSource = self
+        contactsTableView.delegate = self
     }
     
     //MARK: Methods
     func loadAllContacts() {
         allContacts = Contact.getAllContacts()
+    }
+}
+
+extension ContactsVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        allContacts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let contact = allContacts[indexPath.row]
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath)
+        cell.textLabel?.text = contact.fullName
+        cell.detailTextLabel?.text = contact.phoneNumber.description
+        
+        return cell
     }
 }
