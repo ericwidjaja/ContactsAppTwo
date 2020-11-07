@@ -14,7 +14,19 @@
 		DF2F85AD25564B4C00331106 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF2F85AC25564B4C00331106 /* Assets.xcassets */; };
 		DF2F85B025564B4D00331106 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF2F85AE25564B4D00331106 /* LaunchScreen.storyboard */; };
 		DF2F85BA25564B8F00331106 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2F85B925564B8F00331106 /* Contact.swift */; };
+		DF2F85BD25564E1A00331106 /* Notes.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DF2F85BC25564E1A00331106 /* Notes.rtf */; };
+		DF2F85C52556EDB200331106 /* ContactsAppTwoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2F85C42556EDB200331106 /* ContactsAppTwoTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DF2F85C72556EDB200331106 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF2F859825564B4A00331106 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF2F859F25564B4A00331106;
+			remoteInfo = ContactsAppTwo;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		DF2F85A025564B4A00331106 /* ContactsAppTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsAppTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,10 +38,21 @@
 		DF2F85AF25564B4D00331106 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF2F85B125564B4D00331106 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF2F85B925564B8F00331106 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		DF2F85BC25564E1A00331106 /* Notes.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Notes.rtf; sourceTree = SOURCE_ROOT; };
+		DF2F85C22556EDB200331106 /* ContactsAppTwoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactsAppTwoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF2F85C42556EDB200331106 /* ContactsAppTwoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsAppTwoTests.swift; sourceTree = "<group>"; };
+		DF2F85C62556EDB200331106 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DF2F859D25564B4A00331106 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF2F85BF2556EDB200331106 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,7 +65,9 @@
 		DF2F859725564B4A00331106 = {
 			isa = PBXGroup;
 			children = (
+				DF2F85BC25564E1A00331106 /* Notes.rtf */,
 				DF2F85A225564B4A00331106 /* ContactsAppTwo */,
+				DF2F85C32556EDB200331106 /* ContactsAppTwoTests */,
 				DF2F85A125564B4A00331106 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				DF2F85A025564B4A00331106 /* ContactsAppTwo.app */,
+				DF2F85C22556EDB200331106 /* ContactsAppTwoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +120,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		DF2F85C32556EDB200331106 /* ContactsAppTwoTests */ = {
+			isa = PBXGroup;
+			children = (
+				DF2F85C42556EDB200331106 /* ContactsAppTwoTests.swift */,
+				DF2F85C62556EDB200331106 /* Info.plist */,
+			);
+			path = ContactsAppTwoTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -114,6 +149,24 @@
 			productReference = DF2F85A025564B4A00331106 /* ContactsAppTwo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DF2F85C12556EDB200331106 /* ContactsAppTwoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF2F85C92556EDB200331106 /* Build configuration list for PBXNativeTarget "ContactsAppTwoTests" */;
+			buildPhases = (
+				DF2F85BE2556EDB200331106 /* Sources */,
+				DF2F85BF2556EDB200331106 /* Frameworks */,
+				DF2F85C02556EDB200331106 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF2F85C82556EDB200331106 /* PBXTargetDependency */,
+			);
+			name = ContactsAppTwoTests;
+			productName = ContactsAppTwoTests;
+			productReference = DF2F85C22556EDB200331106 /* ContactsAppTwoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -126,6 +179,10 @@
 				TargetAttributes = {
 					DF2F859F25564B4A00331106 = {
 						CreatedOnToolsVersion = 11.7;
+					};
+					DF2F85C12556EDB200331106 = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = DF2F859F25564B4A00331106;
 					};
 				};
 			};
@@ -143,6 +200,7 @@
 			projectRoot = "";
 			targets = (
 				DF2F859F25564B4A00331106 /* ContactsAppTwo */,
+				DF2F85C12556EDB200331106 /* ContactsAppTwoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -152,9 +210,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF2F85BD25564E1A00331106 /* Notes.rtf in Resources */,
 				DF2F85B025564B4D00331106 /* LaunchScreen.storyboard in Resources */,
 				DF2F85AD25564B4C00331106 /* Assets.xcassets in Resources */,
 				DF2F85AB25564B4A00331106 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF2F85C02556EDB200331106 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +238,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DF2F85BE2556EDB200331106 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF2F85C52556EDB200331106 /* ContactsAppTwoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DF2F85C82556EDB200331106 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF2F859F25564B4A00331106 /* ContactsAppTwo */;
+			targetProxy = DF2F85C72556EDB200331106 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DF2F85A925564B4A00331106 /* Main.storyboard */ = {
@@ -344,6 +426,46 @@
 			};
 			name = Release;
 		};
+		DF2F85CA2556EDB200331106 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UZAZ4GBUSA;
+				INFOPLIST_FILE = ContactsAppTwoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ericSwidjaja.ContactsAppTwoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ContactsAppTwo.app/ContactsAppTwo";
+			};
+			name = Debug;
+		};
+		DF2F85CB2556EDB200331106 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UZAZ4GBUSA;
+				INFOPLIST_FILE = ContactsAppTwoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ericSwidjaja.ContactsAppTwoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ContactsAppTwo.app/ContactsAppTwo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -361,6 +483,15 @@
 			buildConfigurations = (
 				DF2F85B525564B4D00331106 /* Debug */,
 				DF2F85B625564B4D00331106 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF2F85C92556EDB200331106 /* Build configuration list for PBXNativeTarget "ContactsAppTwoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF2F85CA2556EDB200331106 /* Debug */,
+				DF2F85CB2556EDB200331106 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
