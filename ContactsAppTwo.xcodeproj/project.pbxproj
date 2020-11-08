@@ -16,6 +16,7 @@
 		DF2F85BA25564B8F00331106 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2F85B925564B8F00331106 /* Contact.swift */; };
 		DF2F85C52556EDB200331106 /* ContactsAppTwoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2F85C42556EDB200331106 /* ContactsAppTwoTests.swift */; };
 		DF2F85CD25576B9F00331106 /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = DF2F85CC25576B9F00331106 /* Notes */; };
+		DF2F85CF255845C700331106 /* ContactDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2F85CE255845C700331106 /* ContactDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		DF2F85C42556EDB200331106 /* ContactsAppTwoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsAppTwoTests.swift; sourceTree = "<group>"; };
 		DF2F85C62556EDB200331106 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF2F85CC25576B9F00331106 /* Notes */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes; sourceTree = "<group>"; };
+		DF2F85CE255845C700331106 /* ContactDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				DF2F85A725564B4A00331106 /* ContactsVC.swift */,
+				DF2F85CE255845C700331106 /* ContactDetailVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				DF2F85BA25564B8F00331106 /* Contact.swift in Sources */,
 				DF2F85A825564B4A00331106 /* ContactsVC.swift in Sources */,
 				DF2F85A425564B4A00331106 /* AppDelegate.swift in Sources */,
+				DF2F85CF255845C700331106 /* ContactDetailVC.swift in Sources */,
 				DF2F85A625564B4A00331106 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

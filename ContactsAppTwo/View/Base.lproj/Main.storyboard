@@ -42,6 +42,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="loc-L6-k5w" kind="show" id="VFT-LW-l2K"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -63,12 +66,12 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="85.714285714285708"/>
         </scene>
-        <!--View Controller-->
+        <!--Contact DetailVC-->
         <scene sceneID="jMz-dp-R5T">
             <objects>
-                <viewController id="loc-L6-k5w" sceneMemberID="viewController">
+                <viewController id="loc-L6-k5w" customClass="ContactDetailVC" customModule="ContactsAppTwo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dlt-b0-mZW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JnJ-cI-fyf">
@@ -76,7 +79,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tef-Ex-dHR">
-                                <rect key="frame" x="72" y="482.5" width="270" height="20.5"/>
+                                <rect key="frame" x="72" y="455.5" width="270" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="270" id="FTn-RO-FSb"/>
                                 </constraints>
@@ -85,7 +88,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMS-4R-JsA">
-                                <rect key="frame" x="72" y="535" width="270" height="20.5"/>
+                                <rect key="frame" x="72" y="508" width="270" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="270" id="iFY-Yz-QWk"/>
                                 </constraints>
@@ -94,7 +97,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCb-gt-T6e">
-                                <rect key="frame" x="72" y="595.5" width="270" height="20.5"/>
+                                <rect key="frame" x="72" y="568.5" width="270" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="270" id="Vz9-2M-0Mm"/>
                                 </constraints>
@@ -103,7 +106,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gjz-dl-Id9">
-                                <rect key="frame" x="72" y="438" width="270" height="20.5"/>
+                                <rect key="frame" x="72" y="411" width="270" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="270" id="whd-GE-XhF"/>
                                 </constraints>
@@ -127,6 +130,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FaY-qO-1kq"/>
                     </view>
+                    <navigationItem key="navigationItem" id="H6M-Mj-pK4"/>
+                    <connections>
+                        <outlet property="contactPhoneNumber" destination="lMS-4R-JsA" id="abp-Jt-iVb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSr-Fk-b4Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

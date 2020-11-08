@@ -25,6 +25,13 @@ class ContactsVC: UIViewController {
     func loadAllContacts() {
         allContacts = Contact.getAllContacts()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? ContactDetailVC,
+            let contactIndexPath = contactsTableView.indexPathForSelectedRow else { return }
+        let contactToSend = allContacts[contactIndexPath.row]
+        destination.currentContact = contactToSend
+    }
 }
 
 extension ContactsVC: UITableViewDelegate, UITableViewDataSource {
