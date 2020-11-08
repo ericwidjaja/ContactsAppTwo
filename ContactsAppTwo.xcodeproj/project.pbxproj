@@ -17,6 +17,7 @@
 		DF2F85C52556EDB200331106 /* ContactsAppTwoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2F85C42556EDB200331106 /* ContactsAppTwoTests.swift */; };
 		DF2F85CD25576B9F00331106 /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = DF2F85CC25576B9F00331106 /* Notes */; };
 		DF2F85CF255845C700331106 /* ContactDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2F85CE255845C700331106 /* ContactDetailVC.swift */; };
+		DF2F85D12558B4A200331106 /* AddContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2F85D02558B4A200331106 /* AddContactVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		DF2F85C62556EDB200331106 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF2F85CC25576B9F00331106 /* Notes */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes; sourceTree = "<group>"; };
 		DF2F85CE255845C700331106 /* ContactDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailVC.swift; sourceTree = "<group>"; };
+		DF2F85D02558B4A200331106 /* AddContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			children = (
 				DF2F85A725564B4A00331106 /* ContactsVC.swift */,
 				DF2F85CE255845C700331106 /* ContactDetailVC.swift */,
+				DF2F85D02558B4A200331106 /* AddContactVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF2F85BA25564B8F00331106 /* Contact.swift in Sources */,
+				DF2F85D12558B4A200331106 /* AddContactVC.swift in Sources */,
 				DF2F85A825564B4A00331106 /* ContactsVC.swift in Sources */,
 				DF2F85A425564B4A00331106 /* AppDelegate.swift in Sources */,
 				DF2F85CF255845C700331106 /* ContactDetailVC.swift in Sources */,
