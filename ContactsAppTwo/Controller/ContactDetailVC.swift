@@ -9,22 +9,31 @@
 import UIKit
 
 class ContactDetailVC: UIViewController {
+    
+    //MARK: Properties
+    
+    @IBOutlet weak var contactFirstName: UILabel!
+    
+    @IBOutlet weak var contactLastName: UILabel!
+    
+    @IBOutlet weak var contactPhoneNumber: UILabel!
+    var currentContact: Contact!
 
+    //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        populateContactInfo()
 
-        // Do any additional setup after loading the view.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: Functions
+    
+    func populateContactInfo() {
+        contactFirstName.text = "First Name :  \(currentContact.firstName) "
+        
+        contactLastName.text = "Last Name :  \(currentContact.lastName) "
+        contactPhoneNumber.text = "Phone Number :  \(currentContact.phoneNumber.description)"
     }
-    */
-
+    
 }

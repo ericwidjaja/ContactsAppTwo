@@ -132,6 +132,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="H6M-Mj-pK4"/>
                     <connections>
+                        <outlet property="contactFirstName" destination="Gjz-dl-Id9" id="3qf-Wi-fvR"/>
+                        <outlet property="contactLastName" destination="tef-Ex-dHR" id="RUf-cz-csu"/>
                         <outlet property="contactPhoneNumber" destination="lMS-4R-JsA" id="abp-Jt-iVb"/>
                     </connections>
                 </viewController>
