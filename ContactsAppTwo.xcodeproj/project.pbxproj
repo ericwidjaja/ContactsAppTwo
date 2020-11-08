@@ -14,8 +14,8 @@
 		DF2F85AD25564B4C00331106 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF2F85AC25564B4C00331106 /* Assets.xcassets */; };
 		DF2F85B025564B4D00331106 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF2F85AE25564B4D00331106 /* LaunchScreen.storyboard */; };
 		DF2F85BA25564B8F00331106 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2F85B925564B8F00331106 /* Contact.swift */; };
-		DF2F85BD25564E1A00331106 /* Notes.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DF2F85BC25564E1A00331106 /* Notes.rtf */; };
 		DF2F85C52556EDB200331106 /* ContactsAppTwoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2F85C42556EDB200331106 /* ContactsAppTwoTests.swift */; };
+		DF2F85CD25576B9F00331106 /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = DF2F85CC25576B9F00331106 /* Notes */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +38,10 @@
 		DF2F85AF25564B4D00331106 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF2F85B125564B4D00331106 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF2F85B925564B8F00331106 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
-		DF2F85BC25564E1A00331106 /* Notes.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Notes.rtf; sourceTree = SOURCE_ROOT; };
 		DF2F85C22556EDB200331106 /* ContactsAppTwoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactsAppTwoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF2F85C42556EDB200331106 /* ContactsAppTwoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsAppTwoTests.swift; sourceTree = "<group>"; };
 		DF2F85C62556EDB200331106 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF2F85CC25576B9F00331106 /* Notes */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 		DF2F859725564B4A00331106 = {
 			isa = PBXGroup;
 			children = (
-				DF2F85BC25564E1A00331106 /* Notes.rtf */,
+				DF2F85CC25576B9F00331106 /* Notes */,
 				DF2F85A225564B4A00331106 /* ContactsAppTwo */,
 				DF2F85C32556EDB200331106 /* ContactsAppTwoTests */,
 				DF2F85A125564B4A00331106 /* Products */,
@@ -210,7 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF2F85BD25564E1A00331106 /* Notes.rtf in Resources */,
+				DF2F85CD25576B9F00331106 /* Notes in Resources */,
 				DF2F85B025564B4D00331106 /* LaunchScreen.storyboard in Resources */,
 				DF2F85AD25564B4C00331106 /* Assets.xcassets in Resources */,
 				DF2F85AB25564B4A00331106 /* Main.storyboard in Resources */,

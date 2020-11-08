@@ -1,0 +1,34 @@
+
+
+1. In the Model File
+    1) Create Contact struct, with constants from the contactsDict
+    2) Create static func to getAllContacts and returning as array of allContact
+    3) Create empty array of all the contacts
+    4) Use for loop to iterate the dictionary, for each key and value in the dict, create a newContact constant as a newElement.
+    5) add this newContact into the Contact array, and return all the contact
+
+2. Add Unit Testing:
+    1)    on Left Pane, Diamond Shape, '+', add unit testing
+    2)    go to Tests Folder, delete all func test that came with it.
+    3)    under 'import XCTest' -> @testable import ContactsAppTwo
+    4)    Write your Test function ->
+    5)    func testGetContacts() {
+    6)            //Arrange
+    7)            let contactsCount = 20
+    8)            //Act
+    9)            let actualContactsCount = Contact.getAllContacts().count
+    10)            //Assert
+    11)            XCTAssertEqual(contactsCount, actualContactsCount, "Value should be equal")
+    12)        }
+    Make sure you run with both examples: failed and success
+
+3. Storyboard and ContactsVC:
+    1)    Refactor your VC to 'ContactsVC' then add TableViewObject, set all constraints to 0, so it will bound to view
+    2)    change to 1 for Prototype Cell. Inside tbl view cell -> change style to subtitle and set identifier to 'contactCell'
+    3)    Connect it with outlet property, then create private var 'allContacts'
+    4)    create func loadAllContacts
+    5)    Create Extension ContactsVC with UITblViewDatasource and UITblViewDelegate, and fill them with protocol stubs -> number of rows and indexPath
+    6)    inside the cellForRowAt -> create indexPath to deque reuseable cell, populate cell with fullName and phone #.
+    7)
+
+
