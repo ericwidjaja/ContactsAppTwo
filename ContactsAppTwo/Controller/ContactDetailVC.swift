@@ -12,19 +12,20 @@ class ContactDetailVC: UIViewController {
     
     //MARK: Properties
     
-    @IBOutlet weak var contactFirstName: UILabel!
-    
-    @IBOutlet weak var contactLastName: UILabel!
-    
-    @IBOutlet weak var contactPhoneNumber: UILabel!
     var currentContact: Contact!
-
+    
+    @IBOutlet weak var contactImage: UIImageView!
+    @IBOutlet weak var contactFirstName: UILabel!
+    @IBOutlet weak var contactLastName: UILabel!
+    @IBOutlet weak var contactPhoneNumber: UILabel!
+    @IBOutlet weak var contactEmail: UILabel!
+    
+    
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         populateContactInfo()
 
-        
     }
     
     //MARK: Functions

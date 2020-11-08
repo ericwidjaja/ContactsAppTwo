@@ -9,22 +9,18 @@
 import UIKit
 
 class AddContactVC: UIViewController {
+    
+    @IBOutlet weak var addContactImage: UIImageView!
+    @IBOutlet weak var addContactFirstName: UITextField!
+    @IBOutlet weak var addContactLastName: UITextField!
+    @IBOutlet weak var addContactEmail: UITextField!
+    @IBOutlet weak var addContactPhone: UITextField!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+ 
 }
