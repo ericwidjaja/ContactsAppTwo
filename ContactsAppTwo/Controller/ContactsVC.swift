@@ -23,7 +23,7 @@ class ContactsVC: UIViewController {
     
     //MARK: Methods
     func loadAllContacts() {
-        allContacts = Contact.getAllContacts()
+        allContacts = Contact.getAllContacts().sorted {$0.firstName < $1.firstName }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
