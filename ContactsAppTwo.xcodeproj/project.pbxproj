@@ -18,6 +18,8 @@
 		DF2F85CD25576B9F00331106 /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = DF2F85CC25576B9F00331106 /* Notes */; };
 		DF2F85CF255845C700331106 /* ContactDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2F85CE255845C700331106 /* ContactDetailVC.swift */; };
 		DF2F85D12558B4A200331106 /* AddContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2F85D02558B4A200331106 /* AddContactVC.swift */; };
+		DF2F85D42558C2D200331106 /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2F85D32558C2D200331106 /* PersistenceHelper.swift */; };
+		DF2F85D72558C30800331106 /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2F85D62558C30800331106 /* FileManager+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		DF2F85CC25576B9F00331106 /* Notes */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes; sourceTree = "<group>"; };
 		DF2F85CE255845C700331106 /* ContactDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailVC.swift; sourceTree = "<group>"; };
 		DF2F85D02558B4A200331106 /* AddContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactVC.swift; sourceTree = "<group>"; };
+		DF2F85D32558C2D200331106 /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
+		DF2F85D62558C30800331106 /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,24 +92,13 @@
 		DF2F85A225564B4A00331106 /* ContactsAppTwo */ = {
 			isa = PBXGroup;
 			children = (
-				DF2F85A325564B4A00331106 /* AppDelegate.swift */,
-				DF2F85A525564B4A00331106 /* SceneDelegate.swift */,
+				DF2F85D52558C2EA00331106 /* Data Persistence */,
 				DF2F85BB25564B9500331106 /* Model */,
 				DF2F85B825564B6E00331106 /* Controller */,
-				DF2F85B725564B6300331106 /* View */,
-				DF2F85AC25564B4C00331106 /* Assets.xcassets */,
-				DF2F85AE25564B4D00331106 /* LaunchScreen.storyboard */,
+				DF2F85D22558C27900331106 /* Supporting Files */,
 				DF2F85B125564B4D00331106 /* Info.plist */,
 			);
 			path = ContactsAppTwo;
-			sourceTree = "<group>";
-		};
-		DF2F85B725564B6300331106 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				DF2F85A925564B4A00331106 /* Main.storyboard */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		DF2F85B825564B6E00331106 /* Controller */ = {
@@ -133,6 +126,27 @@
 				DF2F85C62556EDB200331106 /* Info.plist */,
 			);
 			path = ContactsAppTwoTests;
+			sourceTree = "<group>";
+		};
+		DF2F85D22558C27900331106 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DF2F85A325564B4A00331106 /* AppDelegate.swift */,
+				DF2F85A525564B4A00331106 /* SceneDelegate.swift */,
+				DF2F85A925564B4A00331106 /* Main.storyboard */,
+				DF2F85AC25564B4C00331106 /* Assets.xcassets */,
+				DF2F85AE25564B4D00331106 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DF2F85D52558C2EA00331106 /* Data Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				DF2F85D62558C30800331106 /* FileManager+Extension.swift */,
+				DF2F85D32558C2D200331106 /* PersistenceHelper.swift */,
+			);
+			path = "Data Persistence";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,8 +252,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF2F85BA25564B8F00331106 /* Contact.swift in Sources */,
+				DF2F85D72558C30800331106 /* FileManager+Extension.swift in Sources */,
 				DF2F85D12558B4A200331106 /* AddContactVC.swift in Sources */,
 				DF2F85A825564B4A00331106 /* ContactsVC.swift in Sources */,
+				DF2F85D42558C2D200331106 /* PersistenceHelper.swift in Sources */,
 				DF2F85A425564B4A00331106 /* AppDelegate.swift in Sources */,
 				DF2F85CF255845C700331106 /* ContactDetailVC.swift in Sources */,
 				DF2F85A625564B4A00331106 /* SceneDelegate.swift in Sources */,

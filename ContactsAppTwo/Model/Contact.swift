@@ -5,7 +5,7 @@
 
 import Foundation
 
-struct Contact {
+struct Contact: Codable {
     
     let phoneNumber: Int
     let firstName: String
