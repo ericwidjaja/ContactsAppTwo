@@ -85,15 +85,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f8r-dH-qOL">
-                                <rect key="frame" x="107" y="110" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="mty-nI-V0w"/>
-                                    <constraint firstAttribute="width" constant="200" id="phR-c3-yaj"/>
-                                </constraints>
-                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="First Name" borderStyle="roundedRect" textAlignment="justified" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G0W-MT-J6R">
-                                <rect key="frame" x="127" y="394" width="160" height="48"/>
+                                <rect key="frame" x="127" y="397" width="160" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="9Me-d5-Aln"/>
                                     <constraint firstAttribute="height" constant="48" id="e8L-Z8-QtI"/>
@@ -102,7 +95,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Last Name" borderStyle="roundedRect" textAlignment="justified" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1UF-EI-TWt">
-                                <rect key="frame" x="127" y="458" width="160" height="48"/>
+                                <rect key="frame" x="127" y="461" width="160" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="S3z-kx-TZl"/>
                                     <constraint firstAttribute="height" constant="48" id="vu8-pu-c0U"/>
@@ -111,7 +104,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="justified" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vkW-zz-ID5">
-                                <rect key="frame" x="127" y="522" width="160" height="48"/>
+                                <rect key="frame" x="127" y="525" width="160" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="lRi-vb-tI5"/>
                                     <constraint firstAttribute="width" constant="160" id="xpU-YP-28S"/>
@@ -120,7 +113,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Phone Number" borderStyle="roundedRect" textAlignment="justified" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="khZ-3T-zr1">
-                                <rect key="frame" x="127" y="586" width="160" height="48"/>
+                                <rect key="frame" x="127" y="589" width="160" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="DTb-xY-Aaz"/>
                                     <constraint firstAttribute="height" constant="48" id="z4V-6l-GKm"/>
@@ -128,21 +121,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Vi9-SL-Krc">
+                                <rect key="frame" x="109" y="154" width="180" height="219"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="9Cb-LP-Bgg"/>
+                                    <constraint firstAttribute="height" constant="220" id="iWq-nZ-jEn"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="G0W-MT-J6R" firstAttribute="top" secondItem="f8r-dH-qOL" secondAttribute="bottom" constant="84" id="GQt-Nq-7hJ"/>
                             <constraint firstItem="khZ-3T-zr1" firstAttribute="centerX" secondItem="C2J-g3-tbb" secondAttribute="centerX" id="PM5-1g-EY3"/>
                             <constraint firstItem="G0W-MT-J6R" firstAttribute="centerY" secondItem="C2J-g3-tbb" secondAttribute="centerY" id="QHp-cF-GcV"/>
                             <constraint firstItem="G0W-MT-J6R" firstAttribute="centerX" secondItem="C2J-g3-tbb" secondAttribute="centerX" id="TgU-7i-SMU"/>
+                            <constraint firstItem="Vi9-SL-Krc" firstAttribute="leading" secondItem="U9l-Sq-oYf" secondAttribute="leading" constant="109" id="TnV-mw-JZ5"/>
                             <constraint firstItem="1UF-EI-TWt" firstAttribute="centerX" secondItem="C2J-g3-tbb" secondAttribute="centerX" id="ax6-Ky-dfN"/>
+                            <constraint firstItem="Vi9-SL-Krc" firstAttribute="top" secondItem="U9l-Sq-oYf" secondAttribute="top" constant="153.5" id="eES-aS-Ckq"/>
                             <constraint firstItem="vkW-zz-ID5" firstAttribute="top" secondItem="1UF-EI-TWt" secondAttribute="bottom" constant="16" id="eFH-oo-DUs"/>
                             <constraint firstItem="G0W-MT-J6R" firstAttribute="centerX" secondItem="C2J-g3-tbb" secondAttribute="centerX" id="fm8-nQ-e83"/>
-                            <constraint firstItem="f8r-dH-qOL" firstAttribute="centerX" secondItem="C2J-g3-tbb" secondAttribute="centerX" id="i1D-VN-1qC"/>
                             <constraint firstItem="khZ-3T-zr1" firstAttribute="top" secondItem="vkW-zz-ID5" secondAttribute="bottom" constant="16" id="iKK-ih-0eV"/>
                             <constraint firstItem="G0W-MT-J6R" firstAttribute="centerY" secondItem="C2J-g3-tbb" secondAttribute="centerY" id="q4I-Kn-udK"/>
                             <constraint firstItem="1UF-EI-TWt" firstAttribute="top" secondItem="G0W-MT-J6R" secondAttribute="bottom" constant="16" id="qr6-fe-VlM"/>
-                            <constraint firstItem="f8r-dH-qOL" firstAttribute="top" secondItem="U9l-Sq-oYf" secondAttribute="top" constant="110" id="vy5-fS-F9Z"/>
                             <constraint firstItem="vkW-zz-ID5" firstAttribute="centerX" secondItem="C2J-g3-tbb" secondAttribute="centerX" id="x6p-13-Xg4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="U9l-Sq-oYf"/>
@@ -150,7 +149,6 @@
                     <connections>
                         <outlet property="addContactEmail" destination="vkW-zz-ID5" id="lfY-AZ-75e"/>
                         <outlet property="addContactFirstName" destination="G0W-MT-J6R" id="EQp-Mc-VCo"/>
-                        <outlet property="addContactImage" destination="f8r-dH-qOL" id="4Rq-ri-1q3"/>
                         <outlet property="addContactLastName" destination="1UF-EI-TWt" id="jOo-6V-zZx"/>
                         <outlet property="addContactPhone" destination="khZ-3T-zr1" id="h7a-90-TN5"/>
                     </connections>
