@@ -32,7 +32,6 @@ class ContactDetailVC: UIViewController {
     
     func populateContactInfo() {
         contactFirstName.text = "First Name :  \(currentContact.firstName) "
-        
         contactLastName.text = "Last Name :  \(currentContact.lastName) "
         contactPhoneNumber.text = "Phone Number :  \(currentContact.phoneNumber.description)"
     }
