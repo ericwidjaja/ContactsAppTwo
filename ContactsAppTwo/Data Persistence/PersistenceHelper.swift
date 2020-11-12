@@ -23,6 +23,7 @@ class PersistenceHelper {
     private static func save() throws {
         //step 1. get url path to the file that the Contact will be saved to
         let url = FileManager.pathToDocumentsDirectory(with: filename)
+        print(url)
         
         //'contacts' array will be object that being converted to Data.
         //Data Object will be used and written (saved) to the documents directory

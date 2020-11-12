@@ -22,8 +22,13 @@ class ContactsVC: UIViewController {
     }
     
     //MARK: Methods
-    func loadAllContacts() {
-        allContacts = Contact.getAllContacts().sorted {$0.firstName < $1.firstName }
+    private func loadAllContacts() {
+//        allContacts = Contact.getAllContacts().sorted {$0.firstName < $1.firstName }
+        do {
+            allContacts = try PersistenceHelper.loadAllContacts()
+        } catch {
+            print("error loading contacts: \(error)")
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
