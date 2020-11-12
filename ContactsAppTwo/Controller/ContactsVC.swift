@@ -15,6 +15,7 @@ class ContactsVC: UIViewController {
     }
     
     private var allContacts = [Contact]()
+    
     var isEditingTableView = false {
         didSet {
             contactsTableView.isEditing = isEditingTableView

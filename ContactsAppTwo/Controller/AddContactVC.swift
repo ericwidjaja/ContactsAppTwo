@@ -50,11 +50,4 @@ extension AddContactVC: UITextFieldDelegate {
         addContactPhone.clearsOnBeginEditing = true
         return true
     }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        addContactPhone.resignFirstResponder()
-        addContactFirstName.resignFirstResponder()
-        addContactLastName.resignFirstResponder()
-        return true
-    }
 }
