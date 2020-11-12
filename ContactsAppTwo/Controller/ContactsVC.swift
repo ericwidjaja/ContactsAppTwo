@@ -8,9 +8,20 @@ import UIKit
 class ContactsVC: UIViewController {
     
     //MARK: Properties
-    private var allContacts = [Contact]()
     
     @IBOutlet weak var contactsTableView: UITableView!
+    @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
+        isEditingTableView.toggle() // changes a boolean value
+    }
+    
+    private var allContacts = [Contact]()
+    var isEditingTableView = false {
+        didSet {
+            contactsTableView.isEditing = isEditingTableView
+            // toggle bar button item's title between "Edit" and "Done"
+            navigationItem.leftBarButtonItem?.title = isEditingTableView ? "Done" : "Edit"
+        }
+    }
     
     //MARK: Lifecycle
     override func viewDidLoad() {
@@ -23,11 +34,19 @@ class ContactsVC: UIViewController {
     
     //MARK: Methods
     private func loadAllContacts() {
-//        allContacts = Contact.getAllContacts().sorted {$0.firstName < $1.firstName }
+        //        allContacts = Contact.getAllContacts().sorted {$0.firstName < $1.firstName }
         do {
             allContacts = try PersistenceHelper.loadAllContacts()
         } catch {
             print("error loading contacts: \(error)")
+        }
+    }
+    
+    private func deleteContact(at indexPath: IndexPath) {
+        do {
+            try PersistenceHelper.delete(contact: indexPath.row)
+        } catch {
+            print("error deleting contact: \(error)")
         }
     }
     
