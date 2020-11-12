@@ -27,6 +27,13 @@ class ContactsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
+//        loadAllContacts()
+        contactsTableView.dataSource = self
+        contactsTableView.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         loadAllContacts()
         contactsTableView.dataSource = self
         contactsTableView.delegate = self
@@ -34,9 +41,8 @@ class ContactsVC: UIViewController {
     
     //MARK: Methods
     private func loadAllContacts() {
-        //        allContacts = Contact.getAllContacts().sorted {$0.firstName < $1.firstName }
         do {
-            allContacts = try PersistenceHelper.loadAllContacts()
+            allContacts = try PersistenceHelper.loadAllContacts().sorted {$0.firstName < $1.firstName }
         } catch {
             print("error loading contacts: \(error)")
         }
@@ -66,11 +72,47 @@ extension ContactsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let contact = allContacts[indexPath.row]
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath)
         cell.textLabel?.text = contact.fullName
         cell.detailTextLabel?.text = contact.phoneNumber.description
-        
         return cell
+    }
+
+    //MARK: Deleting rows in TableView
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        switch editingStyle {
+        case .insert:
+            print("inserting...")
+        case .delete:
+            print("deleting...")
+            allContacts.remove(at: indexPath.row) //1. remove contact from Contact Array
+            deleteContact(at: indexPath)
+            contactsTableView.deleteRows(at: [indexPath], with: .automatic) //2. update contactsTableView
+        default:
+            print("...")
+        }
+    }
+    
+    // MARK: Reordering rows in a table view
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let contactToMove = allContacts[sourceIndexPath.row] //pick the contact that being moved
+        allContacts.remove(at: sourceIndexPath.row)
+        allContacts.insert(contactToMove, at: destinationIndexPath.row)
+        
+        //Re-Save Array in documents directory
+        PersistenceHelper.reorderContacts(contacts: allContacts)
+        do {
+            allContacts = try PersistenceHelper.loadAllContacts()
+            contactsTableView.reloadData()
+        } catch {
+            print("error loading contacts: \(error)")
+        }
+    }
+}
+
+extension ContactsVC: AllContactsDelegate {
+    func reloadAllContacts() {
+        print("AllContactsDelegate is called")
+        loadAllContacts()
     }
 }

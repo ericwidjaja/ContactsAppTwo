@@ -20,6 +20,7 @@
 		DF2F85D12558B4A200331106 /* AddContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2F85D02558B4A200331106 /* AddContactVC.swift */; };
 		DF2F85D42558C2D200331106 /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2F85D32558C2D200331106 /* PersistenceHelper.swift */; };
 		DF2F85D72558C30800331106 /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2F85D62558C30800331106 /* FileManager+Extension.swift */; };
+		DF72FE3B255CCF3F00BD727F /* AllContactsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF72FE3A255CCF3F00BD727F /* AllContactsDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		DF2F85D02558B4A200331106 /* AddContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactVC.swift; sourceTree = "<group>"; };
 		DF2F85D32558C2D200331106 /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
 		DF2F85D62558C30800331106 /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
+		DF72FE3A255CCF3F00BD727F /* AllContactsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllContactsDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			children = (
 				DF2F85A325564B4A00331106 /* AppDelegate.swift */,
 				DF2F85A525564B4A00331106 /* SceneDelegate.swift */,
+				DF72FE3A255CCF3F00BD727F /* AllContactsDelegate.swift */,
 				DF2F85A925564B4A00331106 /* Main.storyboard */,
 				DF2F85AC25564B4C00331106 /* Assets.xcassets */,
 				DF2F85AE25564B4D00331106 /* LaunchScreen.storyboard */,
@@ -251,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF72FE3B255CCF3F00BD727F /* AllContactsDelegate.swift in Sources */,
 				DF2F85BA25564B8F00331106 /* Contact.swift in Sources */,
 				DF2F85D72558C30800331106 /* FileManager+Extension.swift in Sources */,
 				DF2F85D12558B4A200331106 /* AddContactVC.swift in Sources */,
