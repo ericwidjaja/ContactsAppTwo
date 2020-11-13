@@ -66,7 +66,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="jLO-zu-ML0">
                             <connections>
-                                <segue destination="lgX-tu-8Jo" kind="presentation" id="w9r-fW-ZRx"/>
+                                <segue destination="lgX-tu-8Jo" kind="presentation" identifier="showAddContactVC" id="ZxT-Hv-sxa"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

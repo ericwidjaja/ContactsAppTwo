@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol AllContactsDelegate: AnyObject {
-    func reloadAllContacts()
-}
+//protocol AllContactsDelegate: AnyObject {
+//    func reloadAllContacts()
+//}

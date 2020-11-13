@@ -14,7 +14,11 @@ class ContactsVC: UIViewController {
         isEditingTableView.toggle() // changes a boolean value
     }
     
-    private var allContacts = [Contact]()
+    private var allContacts = [Contact]() {
+        didSet {
+            contactsTableView.reloadData()
+        }
+    }
     
     var isEditingTableView = false {
         didSet {
@@ -58,10 +62,20 @@ class ContactsVC: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destination = segue.destination as? ContactDetailVC,
-            let contactIndexPath = contactsTableView.indexPathForSelectedRow else { return }
-        let contactToSend = allContacts[contactIndexPath.row]
-        destination.currentContact = contactToSend
+        if segue.identifier == "showAddContactVC" {
+            print("showing addVC")
+            guard let addContactVC = segue.destination as? AddContactVC else {
+                fatalError("Could not segue to AddContactVC")
+            }
+            addContactVC.delegate = self
+            
+        } else {
+            guard let destination = segue.destination as? ContactDetailVC,
+                let contactIndexPath = contactsTableView.indexPathForSelectedRow else { return }
+            let contactToSend = allContacts[contactIndexPath.row]
+            destination.currentContact = contactToSend
+        }
+        
     }
 }
 
@@ -111,9 +125,8 @@ extension ContactsVC: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension ContactsVC: AllContactsDelegate {
-    func reloadAllContacts() {
-        print("AllContactsDelegate is called")
+extension ContactsVC: AddContactVCDelegate {
+    func didAddContact() {
         loadAllContacts()
     }
 }
