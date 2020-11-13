@@ -40,10 +40,11 @@ class AddContactVC: UIViewController {
         
         if addContactPhone.text != "" && addContactFirstName.text != "" && addContactLastName.text != "" {
             
-            //TODO: Refactor and make sure to have an alert if user missing field. watch ALex Optional Chaining about guard let 
-            guard let addPhoneNumber = addContactPhone.text else {return}
-            guard let addFirstName = addContactFirstName.text else {return}
-            guard let addLastName = addContactLastName.text else { return }
+            //TODO: Refactor and make sure to have an alert if user missing field. watch ALex Optional Chaining about guard let
+            
+            guard let addPhoneNumber = addContactPhone.text,
+                    let addFirstName = addContactFirstName.text,
+                    let addLastName = addContactLastName.text else { return }
             
             let newContact = Contact(phoneNumber: addPhoneNumber.description, firstName: addFirstName.description, lastName: addLastName.description)
             try? PersistenceHelper.create(newContact: newContact)
