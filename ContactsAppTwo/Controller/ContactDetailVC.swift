@@ -24,16 +24,25 @@ class ContactDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         populateContactInfo()
-
+        
     }
     
     //MARK: Functions
     
     func populateContactInfo() {
-        contactFirstName.text = "First Name :  \(currentContact.firstName) "
-        contactLastName.text = "Last Name :  \(currentContact.lastName) "
-        contactPhoneNumber.text = "Phone Number :  \(currentContact.phoneNumber.description)"
-        contactEmail.text = "Email Address : \(currentContact.email.description)"
+        
+        contactFullName.text = currentContact.fullName
+        contactPhoneNumber.text = "Phone No. : \(currentContact.phoneNumber.description)"
+        contactEmail.text = "Email Address :  \(currentContact.email.description)"
     }
     
+    @IBAction func callButtonClicked(_ sender: UIButton) {
+        guard let phoneNumberURL = URL(string: "tel://\(currentContact.phoneNumber)") else { return }
+        if UIApplication.shared.canOpenURL(phoneNumberURL) {
+            UIApplication.shared.open(phoneNumberURL)
+        } else {
+            print("unable to open phoneNumberURL on this device")
+        }
+    }
 }
+
