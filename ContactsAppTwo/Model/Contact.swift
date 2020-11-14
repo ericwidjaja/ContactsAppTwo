@@ -10,10 +10,11 @@ struct Contact: Codable {
     let phoneNumber: String
     let firstName: String
     let lastName: String
-    
-    var fullName: String {
-        return firstName + " " + lastName
-    }
+        var fullName: String {
+            return firstName + " " + lastName
+        }
+    let email: String
+//    let image: String
     
 //    static func getAllContacts() -> [Contact] {
 //        

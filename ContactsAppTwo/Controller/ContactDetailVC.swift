@@ -34,6 +34,7 @@ class ContactDetailVC: UIViewController {
         contactFirstName.text = "First Name :  \(currentContact.firstName) "
         contactLastName.text = "Last Name :  \(currentContact.lastName) "
         contactPhoneNumber.text = "Phone Number :  \(currentContact.phoneNumber.description)"
+        contactEmail.text = "Email Address : \(currentContact.email.description)"
     }
     
 }
