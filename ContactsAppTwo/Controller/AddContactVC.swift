@@ -20,6 +20,7 @@ class AddContactVC: UIViewController {
     @IBOutlet weak var addNewEmail: UITextField!
     @IBOutlet weak var addNewPhone: UITextField!
     
+    private let imagePickerController = UIImagePickerController()
     
     
     //MARK: Lifecycle
@@ -36,6 +37,45 @@ class AddContactVC: UIViewController {
         addNewLastName.delegate = self
     }
     
+    @IBAction func addPhotoButtonPressed(_ sender: UIButton) {
+
+        // present an action sheet to ther user
+        // actions: camera, photo library, cancel
+        
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let cameraAction = UIAlertAction(title: "Camera", style: .default) { [weak self] alertAction in
+            self?.showImageController(isCameraSelected: true)
+        }
+        
+        let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default) { [weak self] alertAction in
+            self?.showImageController(isCameraSelected: false)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        // check if camera is available, if camera is not available and you attempt to show
+        // the camera the app will crash
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            alertController.addAction(cameraAction)
+        }
+        
+        alertController.addAction(photoLibraryAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true)
+    }
+    
+    private func showImageController(isCameraSelected: Bool) {
+        // source type default will be .photoLibrary
+        imagePickerController.sourceType = .photoLibrary
+        
+        if isCameraSelected {
+            imagePickerController.sourceType = .camera
+        }
+        present(imagePickerController, animated: true)
+    }
+    
+    
+    
+    
     private func showAlert(with title: String, and message: String) {
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
@@ -43,8 +83,8 @@ class AddContactVC: UIViewController {
     }
     
     @IBAction func createButtonPressed(_ sender: UIButton) {
-        //TODO: Refactor and make sure to have an alert if user missing field. watch ALex Optional Chaining about guard let
         
+        //use Optionals Chaining -> https://www.youtube.com/watch?v=B77J3WIhDAw
         guard let addFirstName = addNewFirstName.text, !addFirstName.isEmpty,
             let addLastName = addNewLastName.text, !addLastName.isEmpty,
             let addPhoneNumber = addNewPhone.text, !addPhoneNumber.isEmpty,
