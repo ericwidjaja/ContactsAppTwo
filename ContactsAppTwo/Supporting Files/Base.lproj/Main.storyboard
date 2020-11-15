@@ -123,11 +123,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNw-Nn-qhu">
-                                <rect key="frame" x="179" y="681" width="56" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="Yxn-RF-88j"/>
-                                    <constraint firstAttribute="height" constant="36" id="d6c-cc-a1X"/>
-                                </constraints>
+                                <rect key="frame" x="179" y="681" width="56" height="30"/>
                                 <state key="normal" title="CREATE"/>
                                 <connections>
                                     <action selector="createButtonPressed:" destination="lgX-tu-8Jo" eventType="touchUpInside" id="glf-X4-OVy"/>
@@ -152,36 +148,33 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="GNw-Nn-qhu" firstAttribute="centerX" secondItem="C2J-g3-tbb" secondAttribute="centerX" id="3ud-ja-JVA"/>
+                            <constraint firstItem="U9l-Sq-oYf" firstAttribute="trailing" secondItem="GNw-Nn-qhu" secondAttribute="trailing" constant="179" id="6rl-Ch-fjs"/>
                             <constraint firstItem="Vi9-SL-Krc" firstAttribute="leading" secondItem="U9l-Sq-oYf" secondAttribute="leading" constant="117" id="Fdo-t7-HyA"/>
                             <constraint firstItem="Vi9-SL-Krc" firstAttribute="centerX" secondItem="C2J-g3-tbb" secondAttribute="centerX" id="Fro-Zi-3dc"/>
+                            <constraint firstItem="GNw-Nn-qhu" firstAttribute="top" secondItem="khZ-3T-zr1" secondAttribute="bottom" constant="44" id="GY5-Tq-U7y"/>
+                            <constraint firstItem="GNw-Nn-qhu" firstAttribute="leading" secondItem="U9l-Sq-oYf" secondAttribute="leading" constant="179" id="JcA-p2-B3R"/>
                             <constraint firstItem="khZ-3T-zr1" firstAttribute="centerX" secondItem="C2J-g3-tbb" secondAttribute="centerX" id="PM5-1g-EY3"/>
                             <constraint firstItem="G0W-MT-J6R" firstAttribute="centerY" secondItem="C2J-g3-tbb" secondAttribute="centerY" id="QHp-cF-GcV"/>
                             <constraint firstItem="Vi9-SL-Krc" firstAttribute="top" secondItem="U9l-Sq-oYf" secondAttribute="top" constant="160" id="Qqq-A6-zQA"/>
                             <constraint firstItem="G0W-MT-J6R" firstAttribute="centerX" secondItem="C2J-g3-tbb" secondAttribute="centerX" id="TgU-7i-SMU"/>
-                            <constraint firstItem="GNw-Nn-qhu" firstAttribute="top" secondItem="khZ-3T-zr1" secondAttribute="bottom" constant="44" id="WCa-4M-7Mt"/>
-                            <constraint firstItem="GNw-Nn-qhu" firstAttribute="leading" secondItem="U9l-Sq-oYf" secondAttribute="leading" constant="179" id="WsG-f8-7d6"/>
-                            <constraint firstItem="U9l-Sq-oYf" firstAttribute="trailing" secondItem="GNw-Nn-qhu" secondAttribute="trailing" constant="179" id="Z0W-42-eMa"/>
                             <constraint firstItem="1UF-EI-TWt" firstAttribute="centerX" secondItem="C2J-g3-tbb" secondAttribute="centerX" id="ax6-Ky-dfN"/>
-                            <constraint firstItem="GNw-Nn-qhu" firstAttribute="centerX" secondItem="C2J-g3-tbb" secondAttribute="centerX" id="duy-oX-zjH"/>
                             <constraint firstItem="vkW-zz-ID5" firstAttribute="top" secondItem="1UF-EI-TWt" secondAttribute="bottom" constant="16" id="eFH-oo-DUs"/>
                             <constraint firstItem="G0W-MT-J6R" firstAttribute="centerX" secondItem="C2J-g3-tbb" secondAttribute="centerX" id="fm8-nQ-e83"/>
                             <constraint firstItem="khZ-3T-zr1" firstAttribute="top" secondItem="vkW-zz-ID5" secondAttribute="bottom" constant="16" id="iKK-ih-0eV"/>
                             <constraint firstItem="U9l-Sq-oYf" firstAttribute="trailing" secondItem="Vi9-SL-Krc" secondAttribute="trailing" constant="117" id="iXl-PZ-CnC"/>
                             <constraint firstItem="G0W-MT-J6R" firstAttribute="centerY" secondItem="C2J-g3-tbb" secondAttribute="centerY" id="q4I-Kn-udK"/>
                             <constraint firstItem="1UF-EI-TWt" firstAttribute="top" secondItem="G0W-MT-J6R" secondAttribute="bottom" constant="16" id="qr6-fe-VlM"/>
-                            <constraint firstItem="GNw-Nn-qhu" firstAttribute="leading" secondItem="U9l-Sq-oYf" secondAttribute="leading" constant="179" id="uAv-QB-zom"/>
-                            <constraint firstItem="U9l-Sq-oYf" firstAttribute="trailing" secondItem="GNw-Nn-qhu" secondAttribute="trailing" constant="179" id="vF6-2P-zvq"/>
                             <constraint firstItem="vkW-zz-ID5" firstAttribute="centerX" secondItem="C2J-g3-tbb" secondAttribute="centerX" id="x6p-13-Xg4"/>
-                            <constraint firstItem="GNw-Nn-qhu" firstAttribute="top" secondItem="khZ-3T-zr1" secondAttribute="bottom" constant="44" id="xcp-m0-qyM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="U9l-Sq-oYf"/>
                     </view>
                     <connections>
-                        <outlet property="addNewEmail" destination="vkW-zz-ID5" id="lfY-AZ-75e"/>
-                        <outlet property="addNewFirstName" destination="G0W-MT-J6R" id="EQp-Mc-VCo"/>
-                        <outlet property="addNewImage" destination="Vi9-SL-Krc" id="Dy1-02-sQV"/>
-                        <outlet property="addNewLastName" destination="1UF-EI-TWt" id="jOo-6V-zZx"/>
-                        <outlet property="addNewPhone" destination="khZ-3T-zr1" id="h7a-90-TN5"/>
+                        <outlet property="newContactImage" destination="Vi9-SL-Krc" id="Dy1-02-sQV"/>
+                        <outlet property="newEmail" destination="vkW-zz-ID5" id="lfY-AZ-75e"/>
+                        <outlet property="newFirstName" destination="G0W-MT-J6R" id="EQp-Mc-VCo"/>
+                        <outlet property="newLastName" destination="1UF-EI-TWt" id="jOo-6V-zZx"/>
+                        <outlet property="newPhone" destination="khZ-3T-zr1" id="h7a-90-TN5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RIt-OT-CCH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

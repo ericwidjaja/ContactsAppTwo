@@ -14,13 +14,18 @@ class AddContactVC: UIViewController {
     weak var delegate: AddContactVCDelegate?
     
     //MARK: Properties
-    @IBOutlet weak var addNewImage: UIImageView!
-    @IBOutlet weak var addNewFirstName: UITextField!
-    @IBOutlet weak var addNewLastName: UITextField!
-    @IBOutlet weak var addNewEmail: UITextField!
-    @IBOutlet weak var addNewPhone: UITextField!
+    @IBOutlet weak var newContactImage: UIImageView!
+    @IBOutlet weak var newFirstName: UITextField!
+    @IBOutlet weak var newLastName: UITextField!
+    @IBOutlet weak var newEmail: UITextField!
+    @IBOutlet weak var newPhone: UITextField!
     
     private let imagePickerController = UIImagePickerController()
+    private var selectedImage: UIImage? {
+      didSet {
+        newContactImage.image = selectedImage
+      }
+    }
     
     
     //MARK: Lifecycle
@@ -29,51 +34,20 @@ class AddContactVC: UIViewController {
         loadNewContactData()
         
     }
+     
     //MARK: Methods
-    
     func loadNewContactData() {
-        addNewPhone.delegate = self
-        addNewFirstName.delegate = self
-        addNewLastName.delegate = self
+        newPhone.delegate = self
+        newFirstName.delegate = self
+        newLastName.delegate = self
     }
     
     @IBAction func addPhotoButtonPressed(_ sender: UIButton) {
-
-        // present an action sheet to ther user
-        // actions: camera, photo library, cancel
-        
-        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let cameraAction = UIAlertAction(title: "Camera", style: .default) { [weak self] alertAction in
-            self?.showImageController(isCameraSelected: true)
-        }
-        
-        let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default) { [weak self] alertAction in
-            self?.showImageController(isCameraSelected: false)
-        }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-        
-        // check if camera is available, if camera is not available and you attempt to show
-        // the camera the app will crash
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            alertController.addAction(cameraAction)
-        }
-        
-        alertController.addAction(photoLibraryAction)
-        alertController.addAction(cancelAction)
-        present(alertController, animated: true)
+        let imagePickerVC = UIImagePickerController()
+        imagePickerVC.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        present(imagePickerVC, animated: true, completion: nil)
+    
     }
-    
-    private func showImageController(isCameraSelected: Bool) {
-        // source type default will be .photoLibrary
-        imagePickerController.sourceType = .photoLibrary
-        
-        if isCameraSelected {
-            imagePickerController.sourceType = .camera
-        }
-        present(imagePickerController, animated: true)
-    }
-    
-    
     
     
     private func showAlert(with title: String, and message: String) {
@@ -85,10 +59,10 @@ class AddContactVC: UIViewController {
     @IBAction func createButtonPressed(_ sender: UIButton) {
         
         //use Optionals Chaining -> https://www.youtube.com/watch?v=B77J3WIhDAw
-        guard let addFirstName = addNewFirstName.text, !addFirstName.isEmpty,
-            let addLastName = addNewLastName.text, !addLastName.isEmpty,
-            let addPhoneNumber = addNewPhone.text, !addPhoneNumber.isEmpty,
-            let addEmail = addNewEmail.text, !addEmail.isEmpty else {
+        guard let addFirstName = newFirstName.text, !addFirstName.isEmpty,
+            let addLastName = newLastName.text, !addLastName.isEmpty,
+            let addPhoneNumber = newPhone.text, !addPhoneNumber.isEmpty,
+            let addEmail = newEmail.text, !addEmail.isEmpty else {
                 showAlert(with: "Required", and: "Please fill out all fields")
                 return
         }
@@ -99,13 +73,15 @@ class AddContactVC: UIViewController {
         dismiss(animated: true)
     }
 }
+//MARK: Extensions
 
 extension AddContactVC: UITextFieldDelegate {
     
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
-        addNewFirstName.clearsOnBeginEditing = true
-        addNewLastName.clearsOnBeginEditing = true
-        addNewPhone.clearsOnBeginEditing = true
+        newFirstName.clearsOnBeginEditing = true
+        newLastName.clearsOnBeginEditing = true
+        newPhone.clearsOnBeginEditing = true
+        newEmail.clearsOnBeginEditing = true
         return true
     }
 }
