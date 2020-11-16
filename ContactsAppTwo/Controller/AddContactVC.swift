@@ -31,10 +31,11 @@ class AddContactVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadNewContactData()
-        setContactImage()
+        
     }
     //MARK: Methods
     func loadNewContactData() {
+        setContactImage()
         newPhone.delegate = self
         newFirstName.delegate = self
         newLastName.delegate = self
@@ -49,6 +50,14 @@ class AddContactVC: UIViewController {
     private func setContactImage() {
         newContactImage.layer.cornerRadius = newContactImage.frame.size.width/2
         newContactImage.clipsToBounds = true
+    }
+    
+    func hideKeyboard() {
+        newFirstName.resignFirstResponder()
+        newLastName.resignFirstResponder()
+        newEmail.resignFirstResponder()
+        newPhone.resignFirstResponder()
+        
     }
     
     
@@ -86,6 +95,13 @@ extension AddContactVC: UITextFieldDelegate {
         newLastName.clearsOnBeginEditing = true
         newPhone.clearsOnBeginEditing = true
         newEmail.clearsOnBeginEditing = true
+
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        hideKeyboard()
+        print("textfield is pressed")
         return true
     }
 }
