@@ -17,6 +17,7 @@ class ContactsVC: UIViewController {
     private var allContacts = [Contact]() {
         didSet {
             contactsTableView.reloadData()
+            dump(allContacts)
         }
     }
     

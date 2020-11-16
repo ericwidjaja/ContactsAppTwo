@@ -28,9 +28,8 @@ class ContactDetailVC: UIViewController {
     }
     
     //MARK: Functions
-    
     func populateContactInfo() {
-        
+        contactImage.image = UIImage(data: currentContact.image?.imageData ?? Data())
         contactFullName.text = currentContact.fullName
         contactPhoneNumber.text = "Phone No. : \(currentContact.phoneNumber.description)"
         contactEmail.text = "Email Address :  \(currentContact.email.description)"

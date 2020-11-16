@@ -15,6 +15,6 @@ struct Contact: Codable {
     }
     
     let email: String
-//    let image: ImageObject
+    let image: ImageObject?
 }
 

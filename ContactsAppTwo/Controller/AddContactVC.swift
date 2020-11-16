@@ -27,15 +27,12 @@ class AddContactVC: UIViewController {
         }
     }
 
-    
-    
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         loadNewContactData()
         setContactImage()
     }
-     
     //MARK: Methods
     func loadNewContactData() {
         newPhone.delegate = self
@@ -67,12 +64,14 @@ class AddContactVC: UIViewController {
         guard let addFirstName = newFirstName.text, !addFirstName.isEmpty,
             let addLastName = newLastName.text, !addLastName.isEmpty,
             let addPhoneNumber = newPhone.text, !addPhoneNumber.isEmpty,
-            let addEmail = newEmail.text, !addEmail.isEmpty else {
+            let addEmail = newEmail.text, !addEmail.isEmpty,
+            let contactImage = newContactImage.image else {
                 showAlert(with: "Required", and: "Please fill out all fields")
                 return
         }
-        let newContact = Contact(phoneNumber: addPhoneNumber.description, firstName: addFirstName.description, lastName: addLastName.description, email: addEmail.description)
         
+        let newContact = Contact(phoneNumber: addPhoneNumber.description, firstName: addFirstName.description, lastName: addLastName.description, email: addEmail.description, image: ImageObject(imageData: newContactImage.image?.pngData(), date: Date.init()))
+    
         try? PersistenceHelper.create(newContact: newContact)
         delegate?.didAddContact()
         dismiss(animated: true)
