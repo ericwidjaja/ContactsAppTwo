@@ -89,8 +89,8 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="justified" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="G0W-MT-J6R">
                                 <rect key="frame" x="127" y="397" width="160" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="9Me-d5-Aln"/>
-                                    <constraint firstAttribute="height" constant="48" id="e8L-Z8-QtI"/>
+                                    <constraint firstAttribute="height" constant="48" id="bc8-t6-QQ5"/>
+                                    <constraint firstAttribute="width" constant="160" id="yds-KZ-Re9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -98,8 +98,8 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="justified" clearsOnBeginEditing="YES" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1UF-EI-TWt">
                                 <rect key="frame" x="127" y="461" width="160" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="S3z-kx-TZl"/>
-                                    <constraint firstAttribute="height" constant="48" id="vu8-pu-c0U"/>
+                                    <constraint firstAttribute="width" constant="160" id="o60-bc-lQQ"/>
+                                    <constraint firstAttribute="height" constant="48" id="ysx-jD-7D9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -107,8 +107,8 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="justified" clearsOnBeginEditing="YES" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vkW-zz-ID5">
                                 <rect key="frame" x="127" y="525" width="160" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="lRi-vb-tI5"/>
-                                    <constraint firstAttribute="width" constant="160" id="xpU-YP-28S"/>
+                                    <constraint firstAttribute="height" constant="48" id="1YX-5q-Xro"/>
+                                    <constraint firstAttribute="width" constant="160" id="ccN-Px-ACW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -116,56 +116,66 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="justified" clearsOnBeginEditing="YES" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="khZ-3T-zr1">
                                 <rect key="frame" x="127" y="589" width="160" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="DTb-xY-Aaz"/>
-                                    <constraint firstAttribute="height" constant="48" id="z4V-6l-GKm"/>
+                                    <constraint firstAttribute="height" constant="48" id="1al-o2-FIH"/>
+                                    <constraint firstAttribute="width" constant="160" id="EjI-iA-SSl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNw-Nn-qhu">
-                                <rect key="frame" x="179" y="681" width="56" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNw-Nn-qhu">
+                                <rect key="frame" x="179" y="681" width="56" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="CREATE"/>
                                 <connections>
                                     <action selector="createButtonPressed:" destination="lgX-tu-8Jo" eventType="touchUpInside" id="glf-X4-OVy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbY-de-bah">
-                                <rect key="frame" x="197" y="364" width="22" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="plus" catalog="system">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbY-de-bah">
+                                <rect key="frame" x="171" y="317" width="72" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="ON9-dK-cpw"/>
+                                    <constraint firstAttribute="width" constant="72" id="m6g-YV-Q0y"/>
+                                </constraints>
+                                <state key="normal" image="camera.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                 </state>
                                 <connections>
                                     <action selector="addPhotoButtonPressed:" destination="lgX-tu-8Jo" eventType="touchUpInside" id="Nyu-Zp-qcg"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Vi9-SL-Krc">
-                                <rect key="frame" x="117" y="160.5" width="180" height="179"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Vi9-SL-Krc">
+                                <rect key="frame" x="117" y="122" width="180" height="179"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="6hT-pd-CRS"/>
+                                    <constraint firstAttribute="height" constant="180" id="Am0-bf-l9D"/>
+                                    <constraint firstAttribute="width" constant="180" id="TRZ-hD-kxh"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="GNw-Nn-qhu" firstAttribute="centerX" secondItem="C2J-g3-tbb" secondAttribute="centerX" id="3ud-ja-JVA"/>
-                            <constraint firstItem="U9l-Sq-oYf" firstAttribute="trailing" secondItem="GNw-Nn-qhu" secondAttribute="trailing" constant="179" id="6rl-Ch-fjs"/>
-                            <constraint firstItem="Vi9-SL-Krc" firstAttribute="leading" secondItem="U9l-Sq-oYf" secondAttribute="leading" constant="117" id="Fdo-t7-HyA"/>
-                            <constraint firstItem="Vi9-SL-Krc" firstAttribute="centerX" secondItem="C2J-g3-tbb" secondAttribute="centerX" id="Fro-Zi-3dc"/>
-                            <constraint firstItem="GNw-Nn-qhu" firstAttribute="top" secondItem="khZ-3T-zr1" secondAttribute="bottom" constant="44" id="GY5-Tq-U7y"/>
-                            <constraint firstItem="GNw-Nn-qhu" firstAttribute="leading" secondItem="U9l-Sq-oYf" secondAttribute="leading" constant="179" id="JcA-p2-B3R"/>
-                            <constraint firstItem="khZ-3T-zr1" firstAttribute="centerX" secondItem="C2J-g3-tbb" secondAttribute="centerX" id="PM5-1g-EY3"/>
-                            <constraint firstItem="G0W-MT-J6R" firstAttribute="centerY" secondItem="C2J-g3-tbb" secondAttribute="centerY" id="QHp-cF-GcV"/>
-                            <constraint firstItem="Vi9-SL-Krc" firstAttribute="top" secondItem="U9l-Sq-oYf" secondAttribute="top" constant="160" id="Qqq-A6-zQA"/>
-                            <constraint firstItem="G0W-MT-J6R" firstAttribute="centerX" secondItem="C2J-g3-tbb" secondAttribute="centerX" id="TgU-7i-SMU"/>
-                            <constraint firstItem="1UF-EI-TWt" firstAttribute="centerX" secondItem="C2J-g3-tbb" secondAttribute="centerX" id="ax6-Ky-dfN"/>
-                            <constraint firstItem="vkW-zz-ID5" firstAttribute="top" secondItem="1UF-EI-TWt" secondAttribute="bottom" constant="16" id="eFH-oo-DUs"/>
-                            <constraint firstItem="G0W-MT-J6R" firstAttribute="centerX" secondItem="C2J-g3-tbb" secondAttribute="centerX" id="fm8-nQ-e83"/>
-                            <constraint firstItem="khZ-3T-zr1" firstAttribute="top" secondItem="vkW-zz-ID5" secondAttribute="bottom" constant="16" id="iKK-ih-0eV"/>
-                            <constraint firstItem="U9l-Sq-oYf" firstAttribute="trailing" secondItem="Vi9-SL-Krc" secondAttribute="trailing" constant="117" id="iXl-PZ-CnC"/>
-                            <constraint firstItem="G0W-MT-J6R" firstAttribute="centerY" secondItem="C2J-g3-tbb" secondAttribute="centerY" id="q4I-Kn-udK"/>
-                            <constraint firstItem="1UF-EI-TWt" firstAttribute="top" secondItem="G0W-MT-J6R" secondAttribute="bottom" constant="16" id="qr6-fe-VlM"/>
-                            <constraint firstItem="vkW-zz-ID5" firstAttribute="centerX" secondItem="C2J-g3-tbb" secondAttribute="centerX" id="x6p-13-Xg4"/>
+                            <constraint firstItem="vkW-zz-ID5" firstAttribute="top" secondItem="1UF-EI-TWt" secondAttribute="bottom" constant="16" id="18T-x4-N1G"/>
+                            <constraint firstItem="1UF-EI-TWt" firstAttribute="leading" secondItem="U9l-Sq-oYf" secondAttribute="leading" constant="127" id="3nV-c7-g4f"/>
+                            <constraint firstItem="U9l-Sq-oYf" firstAttribute="trailing" secondItem="G0W-MT-J6R" secondAttribute="trailing" constant="127" id="6Mb-up-OP5"/>
+                            <constraint firstItem="Vi9-SL-Krc" firstAttribute="centerX" secondItem="C2J-g3-tbb" secondAttribute="centerX" id="6z2-16-aJU"/>
+                            <constraint firstItem="vkW-zz-ID5" firstAttribute="centerX" secondItem="C2J-g3-tbb" secondAttribute="centerX" id="8Zp-Ug-aVy"/>
+                            <constraint firstItem="G0W-MT-J6R" firstAttribute="centerY" secondItem="C2J-g3-tbb" secondAttribute="centerY" id="DzO-5d-twf"/>
+                            <constraint firstItem="khZ-3T-zr1" firstAttribute="top" secondItem="vkW-zz-ID5" secondAttribute="bottom" constant="16" id="H3B-h6-lud"/>
+                            <constraint firstItem="Vi9-SL-Krc" firstAttribute="leading" secondItem="U9l-Sq-oYf" secondAttribute="leading" constant="117" id="Hrr-dR-ca6"/>
+                            <constraint firstItem="U9l-Sq-oYf" firstAttribute="trailing" secondItem="vkW-zz-ID5" secondAttribute="trailing" constant="127" id="Htm-15-oH2"/>
+                            <constraint firstItem="G0W-MT-J6R" firstAttribute="leading" secondItem="U9l-Sq-oYf" secondAttribute="leading" constant="127" id="Lkg-eG-9AC"/>
+                            <constraint firstItem="khZ-3T-zr1" firstAttribute="centerX" secondItem="C2J-g3-tbb" secondAttribute="centerX" id="MaK-8M-0Mu"/>
+                            <constraint firstItem="vkW-zz-ID5" firstAttribute="top" secondItem="1UF-EI-TWt" secondAttribute="bottom" constant="16" id="NAq-ux-mcI"/>
+                            <constraint firstItem="U9l-Sq-oYf" firstAttribute="trailing" secondItem="1UF-EI-TWt" secondAttribute="trailing" constant="127" id="NTx-ch-Yo0"/>
+                            <constraint firstItem="U9l-Sq-oYf" firstAttribute="trailing" secondItem="khZ-3T-zr1" secondAttribute="trailing" constant="127" id="Qx5-IU-mwI"/>
+                            <constraint firstItem="khZ-3T-zr1" firstAttribute="top" secondItem="vkW-zz-ID5" secondAttribute="bottom" constant="16" id="RC3-45-S69"/>
+                            <constraint firstItem="G0W-MT-J6R" firstAttribute="top" secondItem="wbY-de-bah" secondAttribute="bottom" constant="8" id="TDN-NJ-asH"/>
+                            <constraint firstItem="G0W-MT-J6R" firstAttribute="centerX" secondItem="C2J-g3-tbb" secondAttribute="centerX" id="XVT-04-TOp"/>
+                            <constraint firstItem="U9l-Sq-oYf" firstAttribute="trailing" secondItem="Vi9-SL-Krc" secondAttribute="trailing" constant="117" id="bl6-BS-b01"/>
+                            <constraint firstItem="wbY-de-bah" firstAttribute="centerX" secondItem="C2J-g3-tbb" secondAttribute="centerX" id="cSQ-yu-vLe"/>
+                            <constraint firstItem="1UF-EI-TWt" firstAttribute="top" secondItem="G0W-MT-J6R" secondAttribute="bottom" constant="16" id="gQ6-tl-HLd"/>
+                            <constraint firstItem="khZ-3T-zr1" firstAttribute="leading" secondItem="U9l-Sq-oYf" secondAttribute="leading" constant="127" id="yDp-6L-AN8"/>
+                            <constraint firstItem="vkW-zz-ID5" firstAttribute="leading" secondItem="U9l-Sq-oYf" secondAttribute="leading" constant="127" id="yeP-8X-8Xl"/>
+                            <constraint firstItem="wbY-de-bah" firstAttribute="top" secondItem="Vi9-SL-Krc" secondAttribute="bottom" constant="16" id="z28-Q0-1T9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="U9l-Sq-oYf"/>
                     </view>
@@ -294,7 +304,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera.fill" catalog="system" width="128" height="96"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <image name="phone.fill.arrow.up.right" catalog="system" width="128" height="115"/>
         <image name="plus" catalog="system" width="128" height="113"/>
     </resources>

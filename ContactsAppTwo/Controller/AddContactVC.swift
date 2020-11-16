@@ -21,18 +21,19 @@ class AddContactVC: UIViewController {
     @IBOutlet weak var newPhone: UITextField!
     
     private let imagePickerController = UIImagePickerController()
-    private var selectedImage: UIImage? {
-      didSet {
-        newContactImage.image = selectedImage
-      }
+    private var contactImage = UIImage() {
+        didSet {
+            newContactImage.image = contactImage
+        }
     }
+
     
     
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         loadNewContactData()
-        
+        setContactImage()
     }
      
     //MARK: Methods
@@ -47,6 +48,10 @@ class AddContactVC: UIViewController {
         imagePickerVC.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
         present(imagePickerVC, animated: true, completion: nil)
     
+    }
+    private func setContactImage() {
+        newContactImage.layer.cornerRadius = newContactImage.frame.size.width/2
+        newContactImage.clipsToBounds = true
     }
     
     
@@ -83,5 +88,17 @@ extension AddContactVC: UITextFieldDelegate {
         newPhone.clearsOnBeginEditing = true
         newEmail.clearsOnBeginEditing = true
         return true
+    }
+}
+
+extension AddContactVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[.originalImage] as? UIImage else {
+            //couldn't get image :(
+            return
+        }
+        self.contactImage = image
+        print(image)
+        dismiss(animated: true, completion: nil)
     }
 }
