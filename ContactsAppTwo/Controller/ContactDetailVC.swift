@@ -20,6 +20,7 @@ class ContactDetailVC: UIViewController {
     @IBOutlet weak var contactEmail: UILabel!
     
     
+    
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +32,8 @@ class ContactDetailVC: UIViewController {
     func populateContactInfo() {
         contactImage.image = UIImage(data: currentContact.image?.imageData ?? Data())
         contactFullName.text = currentContact.fullName
-        contactPhoneNumber.text = "Phone No. : \(currentContact.phoneNumber.description)"
-        contactEmail.text = "Email Address :  \(currentContact.email.description)"
+        contactPhoneNumber.text = "Phone No.: \n \(currentContact.phoneNumber.description)"
+        contactEmail.text = "Email Address: \n \(currentContact.email.description)"
     }
     
     @IBAction func callButtonClicked(_ sender: UIButton) {
