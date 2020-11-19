@@ -14,6 +14,7 @@ class ContactDetailVC: UIViewController {
     //MARK: Properties
     
     var currentContact: Contact!
+    private let imagePickerController = UIImagePickerController()
     
     @IBOutlet weak var contactImage: UIImageView!
     @IBOutlet weak var contactFullName: UILabel!
@@ -26,7 +27,6 @@ class ContactDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         populateContactInfo()
-        
     }
     
     //MARK: Functions
@@ -49,7 +49,16 @@ class ContactDetailVC: UIViewController {
         composer.setSubject("Help!")
         composer.setMessageBody("Good app, but... I need more help", isHTML: false)
         present(composer, animated: true)
-        
+    }
+    
+    func showImagePicker() {
+        let imagePickerVC = UIImagePickerController()
+        imagePickerVC.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        present(imagePickerVC, animated: true, completion: nil)
+    }
+    
+    @IBAction func editPhotoButtonTapped(_ sender: UIButton) {
+        showImagePicker()
     }
     
     // the following IBAction can only be ran on a device
@@ -61,6 +70,7 @@ class ContactDetailVC: UIViewController {
             print("unable to open phoneNumberURL on this device")
         }
     }
+    
     //https://www.youtube.com/watch?v=J-pn5V2jcfo
     
     @IBAction func emailButtonTapped(_ sender: UIButton) {

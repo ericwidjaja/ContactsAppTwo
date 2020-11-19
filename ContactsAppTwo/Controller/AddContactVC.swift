@@ -41,11 +41,14 @@ class AddContactVC: UIViewController {
         newLastName.delegate = self
     }
     
-    @IBAction func addPhotoButtonPressed(_ sender: UIButton) {
+    func showImagePicker() {
         let imagePickerVC = UIImagePickerController()
         imagePickerVC.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
         present(imagePickerVC, animated: true, completion: nil)
+    }
     
+    @IBAction func addPhotoButtonPressed(_ sender: UIButton) {
+        showImagePicker()
     }
     private func setContactImage() {
         newContactImage.layer.cornerRadius = newContactImage.frame.size.width/2
