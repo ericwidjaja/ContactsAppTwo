@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DF00E0862560911300EE7CF3 /* ImageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF00E0852560911300EE7CF3 /* ImageObject.swift */; };
+		DF10C856256621D500AF5EB3 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF10C855256621D500AF5EB3 /* GradientView.swift */; };
 		DF2F85A425564B4A00331106 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2F85A325564B4A00331106 /* AppDelegate.swift */; };
 		DF2F85A625564B4A00331106 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2F85A525564B4A00331106 /* SceneDelegate.swift */; };
 		DF2F85A825564B4A00331106 /* ContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2F85A725564B4A00331106 /* ContactsVC.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		DF00E0852560911300EE7CF3 /* ImageObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageObject.swift; sourceTree = "<group>"; };
+		DF10C855256621D500AF5EB3 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		DF2F85A025564B4A00331106 /* ContactsAppTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsAppTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF2F85A325564B4A00331106 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF2F85A525564B4A00331106 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF10C8572566281900AF5EB3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DF10C855256621D500AF5EB3 /* GradientView.swift */,
+				DF2F85A925564B4A00331106 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DF2F859725564B4A00331106 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +109,7 @@
 			children = (
 				DF2F85D52558C2EA00331106 /* Data Persistence */,
 				DF2F85BB25564B9500331106 /* Model */,
+				DF10C8572566281900AF5EB3 /* View */,
 				DF2F85B825564B6E00331106 /* Controller */,
 				DF2F85D22558C27900331106 /* Supporting Files */,
 				DF2F85B125564B4D00331106 /* Info.plist */,
@@ -139,7 +151,6 @@
 				DF2F85A325564B4A00331106 /* AppDelegate.swift */,
 				DF2F85A525564B4A00331106 /* SceneDelegate.swift */,
 				DF72FE3A255CCF3F00BD727F /* AllContactsDelegate.swift */,
-				DF2F85A925564B4A00331106 /* Main.storyboard */,
 				DF2F85AC25564B4C00331106 /* Assets.xcassets */,
 				DF2F85AE25564B4D00331106 /* LaunchScreen.storyboard */,
 			);
@@ -259,6 +270,7 @@
 			files = (
 				DF72FE3B255CCF3F00BD727F /* AllContactsDelegate.swift in Sources */,
 				DF2F85BA25564B8F00331106 /* Contact.swift in Sources */,
+				DF10C856256621D500AF5EB3 /* GradientView.swift in Sources */,
 				DF2F85D72558C30800331106 /* FileManager+Extension.swift in Sources */,
 				DF2F85D12558B4A200331106 /* AddContactVC.swift in Sources */,
 				DF2F85A825564B4A00331106 /* ContactsVC.swift in Sources */,
