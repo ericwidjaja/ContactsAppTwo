@@ -270,20 +270,21 @@
                                     <action selector="callButtonClicked:" destination="loc-L6-k5w" eventType="touchUpInside" id="heW-8e-TrL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWG-ud-CTE">
-                                <rect key="frame" x="309" y="22" width="40" height="40"/>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWG-ud-CTE">
+                                <rect key="frame" x="339" y="22" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="EbJ-cR-EMP"/>
-                                    <constraint firstAttribute="width" constant="40" id="Fj1-wx-Zn8"/>
+                                    <constraint firstAttribute="width" constant="40" id="0Wt-fC-a17"/>
+                                    <constraint firstAttribute="height" constant="40" id="jJ5-9t-MMX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="pencil" catalog="system"/>
                             </button>
                         </subviews>
                         <color key="tintColor" red="0.2891814721" green="0.2891814721" blue="0.2891814721" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="FaY-qO-1kq" firstAttribute="trailing" secondItem="CWG-ud-CTE" secondAttribute="trailing" constant="65" id="Y4X-ue-aeM"/>
-                            <constraint firstItem="CWG-ud-CTE" firstAttribute="top" secondItem="FaY-qO-1kq" secondAttribute="top" constant="22" id="bEr-9p-7PL"/>
+                            <constraint firstItem="CWG-ud-CTE" firstAttribute="top" secondItem="FaY-qO-1kq" secondAttribute="top" constant="22" id="CqH-Ge-tNg"/>
+                            <constraint firstItem="FaY-qO-1kq" firstAttribute="trailing" secondItem="CWG-ud-CTE" secondAttribute="trailing" constant="35" id="upd-2l-aFo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FaY-qO-1kq"/>
                         <userDefinedRuntimeAttributes>

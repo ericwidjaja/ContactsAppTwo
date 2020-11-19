@@ -73,7 +73,7 @@ class AddContactVC: UIViewController {
         guard let addFirstName = newFirstName.text, !addFirstName.isEmpty,
             let addLastName = newLastName.text, !addLastName.isEmpty,
             let addPhoneNumber = newPhone.text, !addPhoneNumber.isEmpty,
-            let addEmail = newEmail.text, !addEmail.isEmpty,
+            let addEmail = newEmail.text,
             let contactImage = newContactImage.image else {
                 showAlert(with: "Required", and: "Please fill out all fields")
                 return

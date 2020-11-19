@@ -17,7 +17,7 @@ class ContactsVC: UIViewController {
     private var allContacts = [Contact]() {
         didSet {
             contactsTableView.reloadData()
-            dump(allContacts)
+//            dump(allContacts)
         }
     }
     
@@ -102,7 +102,6 @@ extension ContactsVC: UITableViewDelegate, UITableViewDataSource {
             print("deleting...")
             allContacts.remove(at: indexPath.row) //1. remove contact from Contact Array
             deleteContact(at: indexPath)
-            contactsTableView.deleteRows(at: [indexPath], with: .automatic) //2. update contactsTableView
         default:
             print("...")
         }
