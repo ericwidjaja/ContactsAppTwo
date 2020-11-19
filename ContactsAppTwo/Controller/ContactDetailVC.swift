@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class ContactDetailVC: UIViewController {
     
@@ -36,6 +37,22 @@ class ContactDetailVC: UIViewController {
         contactEmail.text = "Email Address: \n \(currentContact.email.description)"
     }
     
+    func showMailComposer() {
+        //check if your device can send mail
+        guard MFMailComposeViewController.canSendMail() else {
+            //show alert informing the user
+            return
+        }
+        let composer = MFMailComposeViewController()
+        composer.mailComposeDelegate = self //make sure to create delegate for the VC
+        composer.setToRecipients(["support@eric.com"])
+        composer.setSubject("Help!")
+        composer.setMessageBody("Good app, but... I need more help", isHTML: false)
+        present(composer, animated: true)
+        
+    }
+    
+    // the following IBAction can only be ran on a device
     @IBAction func callButtonClicked(_ sender: UIButton) {
         guard let phoneNumberURL = URL(string: "tel://\(currentContact.phoneNumber)") else { return }
         if UIApplication.shared.canOpenURL(phoneNumberURL) {
@@ -44,5 +61,33 @@ class ContactDetailVC: UIViewController {
             print("unable to open phoneNumberURL on this device")
         }
     }
+    //https://www.youtube.com/watch?v=J-pn5V2jcfo
+    
+    @IBAction func emailButtonTapped(_ sender: UIButton) {
+        showMailComposer()
+    }
+    
 }
+//MARK: - Extensions
 
+extension ContactDetailVC: MFMailComposeViewControllerDelegate {
+    // delegate enable us to dismiss the email composer
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        if let _ = error {
+            //show error alert
+            controller.dismiss(animated: true)
+        }
+        switch result {
+        case .cancelled:
+            print("Cancelled")
+        case .failed:
+            print("Failed to send")
+        case .saved:
+            print("Saved")
+        case .sent:
+            print("Email Sent")
+        }
+        
+        controller.dismiss(animated: true)
+    }
+}
