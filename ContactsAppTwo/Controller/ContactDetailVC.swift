@@ -83,14 +83,12 @@ class ContactDetailVC: UIViewController {
     }
     
     //https://www.youtube.com/watch?v=J-pn5V2jcfo
-    
     @IBAction func emailButtonTapped(_ sender: UIButton) {
         showMailComposer()
     }
-    
 }
-//MARK: - Extensions
 
+//MARK: - Extensions
 extension ContactDetailVC: MFMailComposeViewControllerDelegate {
     // delegate enable us to dismiss the email composer
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {

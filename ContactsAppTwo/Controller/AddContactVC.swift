@@ -26,14 +26,14 @@ class AddContactVC: UIViewController {
             newContactImage.image = contactImage
         }
     }
-
-    //MARK: Lifecycle
+    
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         loadNewContactData()
-        
     }
-    //MARK: Methods
+    
+    //MARK: - Functions
     func loadNewContactData() {
         setContactImage()
         newPhone.delegate = self
@@ -70,7 +70,6 @@ class AddContactVC: UIViewController {
     }
     
     @IBAction func createButtonPressed(_ sender: UIButton) {
-        
         //use Optionals Chaining -> https://www.youtube.com/watch?v=B77J3WIhDAw
         guard let addFirstName = newFirstName.text, !addFirstName.isEmpty,
             let addLastName = newLastName.text, !addLastName.isEmpty,
@@ -97,7 +96,7 @@ extension AddContactVC: UITextFieldDelegate {
         newLastName.clearsOnBeginEditing = true
         newPhone.clearsOnBeginEditing = true
         newEmail.clearsOnBeginEditing = true
-
+        
         return true
     }
     

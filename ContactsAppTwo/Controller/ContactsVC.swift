@@ -8,7 +8,6 @@ import UIKit
 class ContactsVC: UIViewController {
     
     //MARK: Properties
-    
     @IBOutlet weak var contactsTableView: UITableView!
     @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
         isEditingTableView.toggle() // changes a boolean value
@@ -92,7 +91,7 @@ extension ContactsVC: UITableViewDelegate, UITableViewDataSource {
         cell.detailTextLabel?.text = contact.phoneNumber.description
         return cell
     }
-
+    
     //MARK: Deleting rows in TableView
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         switch editingStyle {
