@@ -17,7 +17,7 @@ class ContactsVC: UIViewController {
     private var allContacts = [Contact]() {
         didSet {
             contactsTableView.reloadData()
-//            dump(allContacts)
+            dump(allContacts)
         }
     }
     
@@ -73,9 +73,9 @@ class ContactsVC: UIViewController {
             guard let destination = segue.destination as? ContactDetailVC,
                 let contactIndexPath = contactsTableView.indexPathForSelectedRow else { return }
             let contactToSend = allContacts[contactIndexPath.row]
+            destination.currentContactIndex = contactIndexPath.row
             destination.currentContact = contactToSend
         }
-        
     }
 }
 

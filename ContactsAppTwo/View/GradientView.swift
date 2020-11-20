@@ -10,7 +10,7 @@ import UIKit
 @IBDesignable
 
 class GradientView: UIView {
-
+    
     //MARK: - Properties
     @IBInspectable var firstColor: UIColor = UIColor.clear {
         didSet {
@@ -38,12 +38,10 @@ class GradientView: UIView {
     }
     
     //MARK: - Methods
-    
     func updateView() {
         // need to type cast it to CAGradientLayer
         let layer = self.layer as! CAGradientLayer
         layer.colors = [firstColor.cgColor, secondColor.cgColor, thirdColor.cgColor]
-//        layer.locations = [0.1]
     }
-
+    
 }

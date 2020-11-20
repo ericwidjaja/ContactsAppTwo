@@ -84,14 +84,14 @@ class AddContactVC: UIViewController {
         }
         
         let newContact = Contact(phoneNumber: addPhoneNumber.description, firstName: addFirstName.description, lastName: addLastName.description, email: addEmail.description, image: ImageObject(imageData: newContactImage.image?.pngData(), date: Date.init()))
-    
+        
         try? PersistenceHelper.create(newContact: newContact)
         delegate?.didAddContact()
         dismiss(animated: true)
     }
 }
-//MARK: Extensions
 
+//MARK: Extensions
 extension AddContactVC: UITextFieldDelegate {
     
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
