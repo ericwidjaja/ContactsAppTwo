@@ -11,6 +11,7 @@ enum DataPersistenceError: Error { // conforming to the Error protocol
     case noData
     case decodingError(Error)
     case deletingError(Error)
+    case updatingError(Error)
 }
 
 class PersistenceHelper {
@@ -47,6 +48,7 @@ class PersistenceHelper {
     static func create(newContact: Contact) throws {
         //step 2. append new contact to the 'contacts' array
         contacts.append(newContact)
+        contacts.sort {$0.firstName < $1.firstName }
         
         do {
             try save()
@@ -79,6 +81,14 @@ class PersistenceHelper {
     }
     
     //UPDATE
+    static func update(contact index: Int, updateContact: Contact) throws {
+        contacts[index] = updateContact
+        do {
+            try save()
+        } catch {
+            throw DataPersistenceError.updatingError(error)
+        }
+    }
     
     //DELETE - remove a contact from documents directory
     static func delete(contact index: Int) throws {
@@ -93,4 +103,3 @@ class PersistenceHelper {
         }
     }
 }
-

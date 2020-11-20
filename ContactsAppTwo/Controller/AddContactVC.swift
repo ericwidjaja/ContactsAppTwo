@@ -13,7 +13,7 @@ class AddContactVC: UIViewController {
     
     weak var delegate: AddContactVCDelegate?
     
-    //MARK: Properties
+    //MARK: - Properties
     @IBOutlet weak var newContactImage: UIImageView!
     @IBOutlet weak var newFirstName: UITextField!
     @IBOutlet weak var newLastName: UITextField!
@@ -61,9 +61,7 @@ class AddContactVC: UIViewController {
         newLastName.resignFirstResponder()
         newEmail.resignFirstResponder()
         newPhone.resignFirstResponder()
-        
     }
-    
     
     private func showAlert(with title: String, and message: String) {
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
