@@ -50,6 +50,7 @@ class AddContactVC: UIViewController {
     @IBAction func addPhotoButtonPressed(_ sender: UIButton) {
         showImagePicker()
     }
+    
     private func setContactImage() {
         newContactImage.layer.cornerRadius = newContactImage.frame.size.width/2
         newContactImage.clipsToBounds = true

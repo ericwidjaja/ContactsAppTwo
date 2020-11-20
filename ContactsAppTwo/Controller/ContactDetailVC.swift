@@ -59,6 +59,10 @@ class ContactDetailVC: UIViewController {
     
     @IBAction func editPhotoButtonTapped(_ sender: UIButton) {
         showImagePicker()
+        print(currentContact as Any)
+//        let updateImage = currentContact.image?.imageData
+//        
+//        try? PersistenceHelper.update
     }
     
     // the following IBAction can only be ran on a device
