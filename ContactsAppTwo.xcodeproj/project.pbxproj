@@ -23,6 +23,7 @@
 		DF2F85D42558C2D200331106 /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2F85D32558C2D200331106 /* PersistenceHelper.swift */; };
 		DF2F85D72558C30800331106 /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2F85D62558C30800331106 /* FileManager+Extension.swift */; };
 		DF72FE3B255CCF3F00BD727F /* AllContactsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF72FE3A255CCF3F00BD727F /* AllContactsDelegate.swift */; };
+		DFAC7A8E2569CFFC00A77620 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAC7A8D2569CFFC00A77620 /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		DF2F85D32558C2D200331106 /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
 		DF2F85D62558C30800331106 /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
 		DF72FE3A255CCF3F00BD727F /* AllContactsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllContactsDelegate.swift; sourceTree = "<group>"; };
+		DFAC7A8D2569CFFC00A77620 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				DF2F85BB25564B9500331106 /* Model */,
 				DF10C8572566281900AF5EB3 /* View */,
 				DF2F85B825564B6E00331106 /* Controller */,
+				DFAC7A8F2569D02B00A77620 /* Utilities */,
 				DF2F85D22558C27900331106 /* Supporting Files */,
 				DF2F85B125564B4D00331106 /* Info.plist */,
 			);
@@ -164,6 +167,15 @@
 				DF2F85D32558C2D200331106 /* PersistenceHelper.swift */,
 			);
 			path = "Data Persistence";
+			sourceTree = "<group>";
+		};
+		DFAC7A8F2569D02B00A77620 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DFAC7A8D2569CFFC00A77620 /* String+Extensions.swift */,
+			);
+			name = Utilities;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +284,7 @@
 				DF2F85BA25564B8F00331106 /* Contact.swift in Sources */,
 				DF10C856256621D500AF5EB3 /* GradientView.swift in Sources */,
 				DF2F85D72558C30800331106 /* FileManager+Extension.swift in Sources */,
+				DFAC7A8E2569CFFC00A77620 /* String+Extensions.swift in Sources */,
 				DF2F85D12558B4A200331106 /* AddContactVC.swift in Sources */,
 				DF2F85A825564B4A00331106 /* ContactsVC.swift in Sources */,
 				DF2F85D42558C2D200331106 /* PersistenceHelper.swift in Sources */,
